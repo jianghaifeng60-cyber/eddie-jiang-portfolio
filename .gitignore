@@ -4,3 +4,9 @@ dist
 *.log
 .env
 preview-screenshots
+public/assets/source-new
+public/assets/originals
+public/assets/images
+public/assets/portfolio-pages/extracted
+public/assets/portfolio-pages/portfolio-contact-sheet.jpg
+public/assets/portraits/portrait-contact-sheet.jpg

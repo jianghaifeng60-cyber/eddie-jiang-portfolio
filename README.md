@@ -2,6 +2,8 @@
 
 High-end bilingual personal IP and portfolio website for Jiang Haifeng / Eddie Jiang.
 
+The site uses Eddie's real portfolio PDF, CV and lifestyle imagery. Visual direction: dark luxury, architectural grids, cinematic city light, snow scenes, editorial case-study layouts and quiet premium typography.
+
 ## Local Preview
 
 ```bash
@@ -20,16 +22,12 @@ npm run preview
 
 The production output is generated in `dist/`.
 
-## Content Notes
+## Main Assets
 
-Images are stored in `public/assets/images`. Original source images are backed up in `public/assets/originals`.
-
-Current CV and portfolio downloads are placeholders generated from available project information:
-
-- `public/assets/documents/eddie-jiang-cv-preview.pdf`
-- `public/assets/documents/portfolio-sample-fog-house.pptx`
-
-Replace these with final uploaded CV and portfolio PDF files when available. Phone, WeChat and QQ are intentionally not exposed.
+- Portfolio PDF: `public/assets/documents/eddie-jiang-portfolio.pdf`
+- CV PDF: `public/assets/documents/eddie-jiang-cv.pdf`
+- Personal imagery: `public/assets/portraits`
+- Portfolio boards: `public/assets/portfolio-pages`
 
 ## Deploy To Vercel
 
@@ -43,31 +41,11 @@ Replace these with final uploaded CV and portfolio PDF files when available. Pho
 
 ## Deploy To Netlify
 
-1. Go to [Netlify](https://app.netlify.com/start).
-2. Import the GitHub repository.
-3. Build command: `npm run build`.
-4. Publish directory: `dist`.
-5. Deploy.
+1. Import the GitHub repository in Netlify.
+2. Build command: `npm run build`.
+3. Publish directory: `dist`.
+4. Deploy.
 
 ## Deploy To GitHub Pages
 
-1. Install the GitHub Pages helper:
-
-```bash
-npm install -D gh-pages
-```
-
-2. Add these scripts to `package.json`:
-
-```json
-"predeploy": "npm run build",
-"deploy": "gh-pages -d dist"
-```
-
-3. Deploy:
-
-```bash
-npm run deploy
-```
-
-For a repository subpath deployment, set Vite `base` in `vite.config.js` to `/<repository-name>/`.
+Use Vercel first for the cleanest custom-domain and Vite workflow. GitHub Pages can also work by deploying the `dist/` folder with a pages action or `gh-pages`.

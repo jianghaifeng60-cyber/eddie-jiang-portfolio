@@ -51,8 +51,8 @@ function New-Base64 {
   return [Convert]::ToBase64String([System.Text.Encoding]::UTF8.GetBytes($Text))
 }
 
-$IgnoreDirectories = @("node_modules", "dist", "preview-screenshots")
-$IgnoreFiles = @("dev-server.out.log", "dev-server.err.log")
+$IgnoreDirectories = @("node_modules", "dist", "preview-screenshots", "source-new", "extracted", "originals", "images")
+$IgnoreFiles = @("dev-server.out.log", "dev-server.err.log", "eddie-jiang-cv-preview.pdf", "portfolio-sample-fog-house.pdf", "portfolio-sample-fog-house.pptx", "portfolio-contact-sheet.jpg", "portrait-contact-sheet.jpg")
 
 $Files = Get-ChildItem -Path $ProjectRoot -Recurse -File | Where-Object {
   $Relative = $_.FullName.Substring($ProjectRoot.Length + 1)
@@ -102,7 +102,6 @@ foreach ($File in $Files) {
 }
 
 $TreeObject = Invoke-GitHubApi -Method "POST" -Path "/repos/$Repository/git/trees" -Body @{
-  base_tree = $ExistingRef.object.sha
   tree = $Tree
 }
 $Commit = Invoke-GitHubApi -Method "POST" -Path "/repos/$Repository/git/commits" -Body @{
