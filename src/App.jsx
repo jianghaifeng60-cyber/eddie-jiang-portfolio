@@ -73,9 +73,16 @@ function App() {
       </header>
 
       <section className="hero" id="top">
-        <img className="heroBg" src={portrait('life-02-wide.webp')} alt="Eddie Jiang in London at dusk" />
+        <img className="heroBg" src={portrait('life-14-wide.webp')} alt="Eddie Jiang in an atmospheric night setting" />
         <div className="heroShade" />
+        <div className="ambientOrb orbOne" />
+        <div className="ambientOrb orbTwo" />
         <div className="heroCopy">
+          <div className="systemBar">
+            <span>Portfolio OS</span>
+            <span>UK / China</span>
+            <span>2026</span>
+          </div>
           <p className="eyebrow">Spatial Designer / Interior Designer / Narrative Environment Designer</p>
           <h1>Jiang Haifeng <span>Eddie Jiang</span></h1>
           <p className="hanzi">蒋海峰</p>
@@ -91,6 +98,12 @@ function App() {
           <img src={portrait('life-05.webp')} alt="Eddie Jiang in Paris at night" />
           <figcaption>Spatial atmosphere, city memory and personal identity.</figcaption>
         </figure>
+        <div className="floatingDock" aria-hidden="true">
+          <span />
+          <span />
+          <span />
+          <i />
+        </div>
       </section>
 
       <section className="about" id="about">
@@ -117,9 +130,16 @@ function App() {
           <h2>Portfolio projects presented as architectural stories.</h2>
         </div>
         <div className="workGrid">
-          {works.map((work) => (
+          {works.map((work, index) => (
             <article className="workCard" key={work.title}>
-              <img className="workCover" src={work.cover} alt={`${work.title} portfolio cover`} />
+              <div className="workVisual">
+                <div className="glassTop">
+                  <span>{String(index + 1).padStart(2, '0')}</span>
+                  <span>{work.year}</span>
+                  <span>Case View</span>
+                </div>
+                <img className="workCover" src={work.cover} alt={`${work.title} portfolio cover`} />
+              </div>
               <div className="workInfo">
                 <div className="workMeta">
                   <span>{work.year}</span>
@@ -143,6 +163,10 @@ function App() {
             <p>{work.text}</p>
           </div>
           <div className="caseHero">
+            <div className="caseChrome">
+              <span>{work.title}</span>
+              <span>{work.type}</span>
+            </div>
             <img src={work.accent} alt={`${work.title} main board`} />
           </div>
           <div className="boardRail">
