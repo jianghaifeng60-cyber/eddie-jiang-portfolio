@@ -7,7 +7,7 @@ const works = [
     title: 'Stillwater Prison',
     year: '2024',
     type: 'Speculative Spatial Narrative',
-    cover: portfolio('stillwater-render-card.webp'),
+    cover: portfolio('stillwater-render.webp'),
     accent: portfolio('stillwater-board-01.webp'),
     text:
       'A spatial system around isolation, water, psychological pressure and healing. The project uses architectural drawing, atmosphere studies and narrative sequencing to turn emotion into inhabitable space.',
@@ -18,7 +18,7 @@ const works = [
     title: 'The Rise of Qin State',
     year: '2024',
     type: 'Interactive Interior / Game Space',
-    cover: portfolio('qin-render-card.webp'),
+    cover: portfolio('qin-render.webp'),
     accent: portfolio('qin-board-01.webp'),
     text:
       'An interactive interior project reimagining the Mausoleum of the First Qin Emperor through historical storytelling, level-based experience design and cinematic spatial staging.',
@@ -29,7 +29,7 @@ const works = [
     title: 'Residential & Commercial Practice',
     year: '2020-2023',
     type: 'Real Project / Design Practice',
-    cover: portfolio('profile-page-card.webp'),
+    cover: portfolio('profile-page.webp'),
     accent: portfolio('portfolio-contents.webp'),
     text:
       'Built from client communication, site measurement, layout drawing, material coordination, model making and visual presentation in high-end residential and interior design practice.',
