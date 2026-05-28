@@ -12,6 +12,7 @@ const works = [
     text:
       'A spatial system around isolation, water, psychological pressure and healing. The project uses architectural drawing, atmosphere studies and narrative sequencing to turn emotion into inhabitable space.',
     cn: '围绕孤独、水、心理压力与疗愈展开的空间叙事系统。通过建筑图纸、氛围研究与连续场景，把情绪转译为空间体验。',
+    pdfPage: 9,
     boards: ['stillwater-board-01.webp', 'stillwater-board-02.webp', 'stillwater-board-03.webp', 'stillwater-board-04.webp', 'stillwater-render.webp'],
   },
   {
@@ -23,6 +24,7 @@ const works = [
     text:
       'An interactive interior project reimagining the Mausoleum of the First Qin Emperor through historical storytelling, level-based experience design and cinematic spatial staging.',
     cn: '以秦始皇陵为叙事原型的交互式室内空间项目，结合历史叙事、关卡体验与电影感场景组织。',
+    pdfPage: 14,
     boards: ['qin-cover.webp', 'qin-masterplan.webp', 'qin-board-01.webp', 'qin-board-02.webp', 'qin-board-03.webp', 'qin-render.webp'],
   },
   {
@@ -34,6 +36,7 @@ const works = [
     text:
       'Built from client communication, site measurement, layout drawing, material coordination, model making and visual presentation in high-end residential and interior design practice.',
     cn: '来自真实项目中的量房、放图、客户沟通、材料选型、模型制作与效果表达经验。',
+    pdfPage: 3,
     boards: ['profile-page.webp', 'portfolio-contents.webp', 'portfolio-cover.webp'],
   },
 ]
@@ -155,7 +158,7 @@ function App() {
         </div>
       </section>
 
-      {works.slice(0, 2).map((work) => (
+      {works.map((work) => (
         <section className="caseStudy" id={work.title.replaceAll(' ', '-').toLowerCase()} key={work.title}>
           <div className="caseIntro">
             <p className="sectionLabel">{work.year} / {work.type}</p>
@@ -167,7 +170,11 @@ function App() {
               <span>{work.title}</span>
               <span>{work.type}</span>
             </div>
-            <img src={work.accent} alt={`${work.title} main board`} />
+            <iframe
+              className="portfolioFrame"
+              title={`${work.title} full portfolio page`}
+              src={`${doc('eddie-jiang-portfolio.pdf')}#page=${work.pdfPage}&view=FitH`}
+            />
           </div>
           <div className="boardRail">
             {work.boards.map((board) => (

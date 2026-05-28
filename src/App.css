@@ -20,10 +20,11 @@ body {
   margin: 0;
   min-width: 320px;
   background:
-    linear-gradient(90deg, rgba(242, 240, 234, 0.026) 1px, transparent 1px) 0 0 / 8.333vw 8.333vw,
-    linear-gradient(0deg, rgba(242, 240, 234, 0.018) 1px, transparent 1px) 0 0 / 8.333vw 8.333vw,
-    radial-gradient(circle at 72% 12%, rgba(169, 187, 213, 0.12), transparent 30rem),
-    linear-gradient(180deg, #08090c 0%, #0d1016 42%, #08090c 100%);
+    linear-gradient(90deg, rgba(242, 240, 234, 0.03) 1px, transparent 1px) 0 0 / 8.333vw 8.333vw,
+    linear-gradient(0deg, rgba(242, 240, 234, 0.022) 1px, transparent 1px) 0 0 / 8.333vw 8.333vw,
+    radial-gradient(circle at 20% 0%, rgba(216, 201, 145, 0.12), transparent 34rem),
+    radial-gradient(circle at 78% 14%, rgba(169, 187, 213, 0.16), transparent 34rem),
+    linear-gradient(180deg, #111214 0%, #13171e 42%, #0d1016 100%);
 }
 
 a {
@@ -521,6 +522,15 @@ h2 {
   aspect-ratio: 16 / 9.4;
   object-fit: contain;
   background: #0d1016;
+}
+
+.portfolioFrame {
+  display: block;
+  width: 100%;
+  height: min(78vh, 920px);
+  min-height: 620px;
+  border: 0;
+  background: #f2f0ea;
 }
 
 .boardRail {
